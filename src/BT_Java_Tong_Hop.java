@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class BT_Java_Tong_Hop {
     public static void main(String[] args) {
         int choice;
@@ -57,7 +56,6 @@ public class BT_Java_Tong_Hop {
             System.out.println("Enter u choice");
         } while (choice >= 1 && choice <= 11);
     }
-
     static void menu() {
         System.out.println("========MENU========");
         System.out.println("1. Enter size N of Array (0<N<100)");
@@ -72,7 +70,6 @@ public class BT_Java_Tong_Hop {
         System.out.println("10. Sort Arrays Down ");
         System.out.println("11. Exit");
     }
-
     static int inputSize() {
         int N;
         Scanner sc = new Scanner(System.in);
@@ -82,7 +79,6 @@ public class BT_Java_Tong_Hop {
         } while (N <= 0 || N >= 100);
         return N;
     }
-
     static void inputArray(int[] arr, int N) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size N of Array (0<N<100)");
@@ -91,14 +87,12 @@ public class BT_Java_Tong_Hop {
             arr[i] = sc.nextInt();
         }
     }
-
     static void disPlayArray(int[] arr, int N) {
         System.out.println("Array is :");
         for (int i = 0; i < N; i++) {
             System.out.println(arr[i] + " ");
         }
     }
-
     static int FindEvenNumber(int[] arr, int N) {
         int[] even = new int[N];
         int c = 0;
@@ -106,6 +100,9 @@ public class BT_Java_Tong_Hop {
             if (arr[i] % 2 == 0) {
                 even[c] = arr[i];
                 c++;
+            }else {
+                System.out.println("Array not have Even number");
+                break;
             }
         }
         int max = even[0];
@@ -118,7 +115,6 @@ public class BT_Java_Tong_Hop {
         System.out.println(max);
         return max;
     }
-
     static void DisplayEvenNumber(int[] arr, int N) {
         int[] even = new int[N];
         int c = 0;
@@ -126,6 +122,9 @@ public class BT_Java_Tong_Hop {
             if (arr[i] % 2 == 0) {
                 even[c] = arr[i];
                 c++;
+            }else {
+                System.out.println("Array not have Even number");
+                break;
             }
         }
         System.out.println("Even Numbers is: ");
@@ -140,6 +139,9 @@ public class BT_Java_Tong_Hop {
             if (arr[i] % 2 == 0) {
                 even[c] = arr[i];
                 c++;
+            }else {
+                System.out.println("Array not have Even number");
+                break;
             }
         }
         int sum = 0;
